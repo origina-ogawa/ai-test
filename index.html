@@ -592,6 +592,40 @@
     }
     .social-btn:hover { background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.35); color: var(--text); }
 
+    /* BACK TO TOP */
+    #back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: #fff;
+      z-index: 9999;
+      box-shadow: 0 4px 24px rgba(99,102,241,0.55);
+      transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(12px);
+      line-height: 1;
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    #back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 40px rgba(99,102,241,0.75);
+    }
+
     /* RESPONSIVE */
     @media (max-width: 1024px) {
       .about-grid { grid-template-columns: 1fr; gap: 52px; }
@@ -615,6 +649,7 @@
       .test-grid { grid-template-columns: 1fr; }
       .process-track { grid-template-columns: 1fr 1fr; }
       .about-img { height: 320px; }
+      #back-to-top { bottom: 20px; right: 20px; width: 46px; height: 46px; font-size: 18px; }
     }
     @media (max-width: 480px) {
       .stats-grid { grid-template-columns: 1fr 1fr; }
@@ -684,12 +719,12 @@
     <div class="container">
       <p class="logos-label">大手企業からの信頼</p>
       <div class="logos-row">
-        <span class="logo-item">みずほ銀行</span>
-        <span class="logo-item">SoftBank</span>
-        <span class="logo-item">Toyota</span>
-        <span class="logo-item">Recruit</span>
-        <span class="logo-item">NTTデータ</span>
-        <span class="logo-item">富士通</span>
+        <span class="logo-item">みなと銀行</span>
+        <span class="logo-item">SwiftLink</span>
+        <span class="logo-item">Toyowa</span>
+        <span class="logo-item">Recrux</span>
+        <span class="logo-item">NTCデータ</span>
+        <span class="logo-item">富士テック</span>
       </div>
     </div>
   </section>
@@ -930,7 +965,7 @@
       <div class="team-grid">
         <div class="team-card fade-in">
           <div class="team-photo">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop&q=80" alt="中村 健二">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80" alt="中村 健二">
           </div>
           <div class="team-info">
             <h3>中村 健二</h3>
@@ -940,22 +975,22 @@
         </div>
         <div class="team-card fade-in">
           <div class="team-photo">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80" alt="チェン・サラ">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=80" alt="田中 彩花">
           </div>
           <div class="team-info">
-            <h3>チェン・サラ</h3>
+            <h3>田中 彩花</h3>
             <span class="team-role">CTO &amp; 共同創業者</span>
-            <p>元Googleブレインエンジニア。スタンフォード大学コンピュータサイエンスPhD。数十億ユーザーが利用するAIシステムを設計。</p>
+            <p>元Googleブレインエンジニア。慶應義塾大学コンピュータサイエンスPhD。数十億ユーザーが利用するAIシステムを設計。</p>
           </div>
         </div>
         <div class="team-card fade-in">
           <div class="team-photo">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80" alt="マーカス・ロドリゲス">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=500&auto=format&fit=crop&q=80" alt="鈴木 正樹">
           </div>
           <div class="team-info">
-            <h3>マーカス・ロドリゲス</h3>
+            <h3>鈴木 正樹</h3>
             <span class="team-role">データサイエンス部門長</span>
-            <p>StripeとPalantirでデータプラットフォームを15年間構築。大規模MLインフラとデータエンジニアリングのエキスパート。</p>
+            <p>大手フィンテック企業とコンサルティングファームでデータプラットフォームを15年間構築。大規模MLインフラとデータエンジニアリングのエキスパート。</p>
           </div>
         </div>
       </div>
@@ -977,7 +1012,7 @@
             <div class="t-avatar">田中</div>
             <div>
               <div class="t-name">田中 勇樹</div>
-              <div class="t-title">CTO, みずほフィナンシャルグループ</div>
+              <div class="t-title">CTO, みなとフィナンシャルグループ</div>
             </div>
           </div>
         </div>
@@ -988,7 +1023,7 @@
             <div class="t-avatar">小林</div>
             <div>
               <div class="t-name">小林 雅子</div>
-              <div class="t-title">イノベーション担当VP, リクルートHD</div>
+              <div class="t-title">イノベーション担当VP, RecruXホールディングス</div>
             </div>
           </div>
         </div>
@@ -999,7 +1034,7 @@
             <div class="t-avatar">渡辺</div>
             <div>
               <div class="t-name">渡辺 宏</div>
-              <div class="t-title">AIディレクター, NTTデータ</div>
+              <div class="t-title">AIディレクター, NTCデータ</div>
             </div>
           </div>
         </div>
@@ -1068,6 +1103,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- トップへ戻るボタン -->
+  <button id="back-to-top" aria-label="トップへ戻る">&#8679;</button>
 
   <script>
     const nav = document.getElementById('nav');
@@ -1159,6 +1197,14 @@
       navLinks.style.cssText = menuOpen
         ? 'display:flex;flex-direction:column;position:fixed;top:58px;left:0;right:0;background:rgba(6,6,15,0.97);backdrop-filter:blur(20px);padding:24px 28px;gap:20px;border-bottom:1px solid rgba(255,255,255,0.07);z-index:999;'
         : '';
+    });
+
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 
